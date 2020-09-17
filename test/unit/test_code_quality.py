@@ -14,6 +14,6 @@ def test_pycodestyle_conformance():
     pycodestyle_style.input_dir(os.path.join(package_dir, 'src', 'capabilities'))
     pycodestyle_style.options.filename = '.*'
     pycodestyle_style.input_dir(os.path.join(package_dir, 'scripts'))
-
+    
     report.stop()
     assert report.total_errors == 0, "Found '{0}' code style errors (and warnings).".format(report.total_errors)
