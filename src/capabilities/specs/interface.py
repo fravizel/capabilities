@@ -122,7 +122,7 @@ def capability_interface_from_file_path(file_path):
     :raises: :py:exc:`OSError` if the given file does not exist
     """
     with open(os.path.abspath(file_path), 'r') as f:
-        return capability_interface_from_dict(yaml.load(f), file_path)
+        return capability_interface_from_dict(yaml.load(f, Loader=yaml.BaseLoader), file_path)
 
 
 def capability_interface_from_file(file_handle):
